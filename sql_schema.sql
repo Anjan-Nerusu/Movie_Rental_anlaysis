@@ -1,150 +1,5 @@
 -- creator @anjan
 ----- creating and inserting tables for data analysing and processing.
--- i have data of four table shere namely employees, orders, departments and sales with the table creations 
--- along with their meta data and the inserions of data for the specific tables created.
-
-CREATE TABLE employees (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    salary DECIMAL(10, 2),
-    department_id INT,
-    manager_id INT
-);
-
-INSERT INTO employees (id, name, salary, department_id, manager_id) VALUES
-(1, 'Alice', 6000, 101, NULL),
-(2, 'Bob', 4500, 102, 1),
-(3, 'Charlie', 5200, 101, 1),
-(4, 'David', 3800, 102, 2),
-(5, 'Eve', 7500, 103, NULL),
-(6, 'Frank', 5000, 101, 3),
-(7, 'Grace', 4000, 103, 5),
-(8, 'Heidi', 4200, 102, 2);
-
-CREATE TABLE departments (
-    department_id INT PRIMARY KEY,
-    department_name VARCHAR(50)
-);
-
-INSERT INTO departments (department_id, department_name) VALUES
-(101, 'Engineering'),
-(102, 'Sales'),
-(103, 'HR');
-
-CREATE TABLE orders (
-    id INT PRIMARY KEY,
-    order_id INT,
-    customer_name VARCHAR(50),
-    amount DECIMAL(10, 2)
-);
-
-INSERT INTO orders (id, order_id, customer_name, amount) VALUES
-(1, 101, 'Alice', 250.50),
-(2, 102, 'Bob', 300.00),
-(3, 103, 'Charlie', 150.00),
-(4, 101, 'David', 250.50), 
-(5, 104, 'Eve', 400.00),
-(6, 105, 'Grace', 300.00),
-(7, 102, 'Heidi', 300.00);
-
-CREATE TABLE sales_data (
-    id INT PRIMARY KEY,
-    year INT,
-    region VARCHAR(50),
-    sales DECIMAL(10, 2)
-);
-
-INSERT INTO sales_data (id, year, region, sales) VALUES
-(1, 2020, 'North', 5000.00),
-(2, 2021, 'North', 6000.00),
-(3, 2022, 'North', 5500.00),
-(4, 2020, 'South', 4000.00),
-(5, 2021, 'South', 4200.00),
-(6, 2022, 'South', 4500.00),
-(7, 2020, 'East', 3000.00),
-(8, 2021, 'East', 3200.00),
-(9, 2022, 'East', 3500.00);
-
--- Create schools table
-CREATE TABLE schools (
-    school_id INT PRIMARY KEY,
-    school_name VARCHAR(100),
-    district_id INT,
-    number_of_students INT
-);
-
--- Insert sample data into schools
-INSERT INTO schools (school_id, school_name, district_id, number_of_students) VALUES
-(1, 'Springfield High', 1, 1200),
-(2, 'Green Valley School', 1, 800),
-(3, 'Riverside Academy', 2, 950),
-(4, 'Oakwood Secondary', 2, 1100),
-(5, 'Maple Ridge High', 3, 1500),
-(6, 'Sunshine Preparatory', 3, 700),
-(7, 'Blue Mountain School', 4, 900),
-(8, 'Pinecrest Academy', 4, 1050),
-(9, 'Silver Lake High', 5, 1300),
-(10, 'Cedar Grove School', 5, 1150),
-(11, 'Westfield Academy', 6, 1000),
-(12, 'Lakeside High', 6, 950),
-(13, 'Mountain View School', 7, 850),
-(14, 'Clearwater Academy', 7, 1300),
-(15, 'Willow Creek High', 8, 1400),
-(16, 'Redwood Academy', 8, 1200),
-(17, 'Sunnydale School', 9, 1000),
-(18, 'Riverbend High', 9, 1100),
-(19, 'Valley Forge Academy', 10, 900),
-(20, 'Parkside Secondary', 10, 1050);
-
--- Create Bonus_jan table
-CREATE TABLE Bonus_jan (
-    employee_id INT PRIMARY KEY,
-    first_name VARCHAR(100),
-    last_name VARCHAR(100),
-    position VARCHAR(100),
-    outlet INT,
-    region VARCHAR(50),
-    bonus DECIMAL(10, 2)
-);
-
--- Insert sample data into Bonus_jan
-INSERT INTO Bonus_jan (employee_id, first_name, last_name, position, outlet, region, bonus) VALUES
-(1, 'Max', 'Black', 'manager', 123, 'South', 2305.45),
-(2, 'Jane', 'Wolf', 'cashier', 123, 'South', 1215.35),
-(3, 'Kate', 'White', 'customer service specialist', 123, 'South', 1545.75),
-(4, 'Andrew', 'Smart', 'customer service specialist', 123, 'South', 1800.55),
-(5, 'John', 'Ruder', 'manager', 105, 'South', 2549.45),
-(6, 'Sebastian', 'Cornell', 'cashier', 105, 'South', 1505.25),
-(7, 'Diana', 'Johnson', 'customer service specialist', 105, 'South', 2007.95),
-(8, 'Sofia', 'Blanc', 'manager', 224, 'North', 2469.75),
-(9, 'Jack', 'Spider', 'customer service specialist', 224, 'North', 2100.50),
-(10, 'Maria', 'Le', 'cashier', 224, 'North', 1325.65),
-(11, 'Anna', 'Winfrey', 'manager', 211, 'North', 2390.25),
-(12, 'Marion', 'Spencer', 'cashier', 211, 'North', 1425.25);
-
-CREATE TABLE bonus_jann (
-    employee_id INT PRIMARY KEY,
-    first_name VARCHAR(100),
-    last_name VARCHAR(100),
-    position VARCHAR(100),
-    outlet INT,
-    region VARCHAR(50),
-    bonus DECIMAL(10, 2)
-);
-INSERT INTO bonus_jann (employee_id, first_name, last_name, position, outlet, region, bonus) VALUES
-(1, 'Max', 'Black', 'manager', 123, 'South', 2305.45),
-(2, 'Jane', 'Wolf', 'cashier', 123, 'South', 1215.35),
-(3, 'Kate', 'White', 'customer service specialist', 123, 'South', 1545.75),
-(4, 'Andrew', 'Smart', 'customer service specialist', 123, 'South', 1800.55),
-(5, 'John', 'Ruder', 'manager', 105, 'South', 2549.45),
-(6, 'Sebastian', 'Cornell', 'cashier', 105, 'South', 1505.25),
-(7, 'Diana', 'Johnson', 'customer service specialist', 105, 'South', 2007.95),
-(8, 'Sofia', 'Blanc', 'manager', 224, 'North', 2469.75),
-(9, 'Jack', 'Spider', 'customer service specialist', 224, 'North', 2100.50),
-(10, 'Maria', 'Le', 'cashier', 224, 'North', 1325.65),
-(11, 'Anna', 'Winfrey', 'manager', 211, 'North', 2390.25),
-(12, 'Marion', 'Spencer', 'cashier', 211, 'North', 1425.25);
-
 -- -------------------MOVIE DATABASE---------------------------
 -- -------------------Table Creation---------------------------
 CREATE TABLE movies (
@@ -298,7 +153,11 @@ INSERT INTO customers (customer_id, name, email, city) VALUES
 (47, 'Lucas Bell', 'lucasb@example.com', 'Anchorage'),
 (48, 'Sofia Evans', 'sofiaevans@example.com', 'Chattanooga'),
 (49, 'Levi Thomas', 'levithomas@example.com', 'Lexington'),
-(50, 'Ella White', 'ellaw@example.com', 'Stockton');
+(50, 'Ella White', 'ellaw@example.com', 'Stockton'),
+(51, 'David Scott', 'davids@example.com', 'New York'),
+(52, 'Emily White', 'emilyw@example.com', 'New York'),
+(53, 'Liam Harris', 'liamh@example.com', 'Los Angeles'),
+(54, 'Emma Martin', 'emmat@example.com', 'Los Angeles');
 
 
 INSERT INTO rentals (rental_id, customer_id, movie_id, rental_date, return_date, due_date, store_id, staff_id) VALUES
@@ -514,11 +373,8 @@ INSERT INTO stores (store_id, name, city) VALUES
 (49, 'Store 49', 'Lexington'),
 (50, 'Store 50', 'Stockton');
 
-INSERT INTO customers (customer_id, name, email, city) VALUES
-(51, 'David Scott', 'davids@example.com', 'New York'),
-(52, 'Emily White', 'emilyw@example.com', 'New York'),
-(53, 'Liam Harris', 'liamh@example.com', 'Los Angeles'),
-(54, 'Emma Martin', 'emmat@example.com', 'Los Angeles');
+
+
 
 
 
